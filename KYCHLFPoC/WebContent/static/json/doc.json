@@ -4,7 +4,7 @@
 			"blockchainIPAddress":"192.168.99.100",
 			"bankName":"HDFC",
 			"port":"7050",
-			"chainCode":"0d65dbedabef6a41d330b95d6f449d73b1e48ad4d84bdf798fb332d2d375a712411bef7e2c3306dfb50854f2c18ea249a8af58b31d069331c70babf5b0417150"
+			"chainCode":"bfbdb9785f26ff0d18e1ce176b1b4db8d637ae70518b9e1544f97f73ad970866f0db61696c4892ca5a34b7345acfc0fec6949b22c15e7c85f60a6359e6ec4162"
 		},{
 			"userID":"test_user2",
 			"password":"zMflqOKezFiA",
