@@ -1,0 +1,170 @@
+.loginPageImg {
+	height: 100vh;
+	background-image: url("../images/login/bg_desktop.png");
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	padding:0;
+}
+
+.login-box {
+	margin:auto 0; 
+	
+}
+
+.logoMarginBottom {
+	margin-bottom: 65px;
+}
+
+.loginButton {
+	background-repeat: no-repeat;
+	background-image: url("../images/login/login_btn.png");
+	min-height: 60px;
+	max-width: 390px;
+	cursor: pointer;
+	margin:auto;
+}
+
+/* .loginLabel {
+	display: inline-block;
+	min-width: 30px;
+	min-height: 30px;
+	background-repeat: no-repeat;
+	margin-bottom: -13px;
+	margin-left:11%;
+} */
+
+.loginLogo {
+	background-image: url("../images/login/username_2x.png");
+	display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-repeat:no-repeat;
+}
+.loginInputNew{
+	width: 84%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    height:60px;
+}
+.spacing{
+	max-width:390px;
+    margin: auto;
+   	/* margin-top: 16px; */
+}
+.loginUserInput {
+	display: inline-block;
+	width: 90%;
+	background-color: transparent;
+	font-size: 18px;
+	border: none;
+	color: #8F8E8F;
+	border-bottom: 1px solid;
+}
+
+.forgotPwd {
+	background-color: transparent;
+	border: none;
+	color: #8F8E8F; /*5F5E61*/
+	font-size: 16px;
+	text-align: center;
+}
+
+.input:-webkit-autofill {
+	background-color: transparent;
+}
+
+.PassLogo {
+	background-image: url("../images/login/password_2x.png");
+	display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-repeat:no-repeat;
+}
+
+.loginUserInput:focus {
+	/* border:none; */
+	border-radius: 0px;
+	box-shadow: none;
+}
+.form-group {
+	margin-bottom: 25px;
+	font-family: Montserrat-Light;
+}
+
+.submitButton {
+	background-image: url("../images/add_kyc/submit.png");
+	/* needs to be changed */
+	min-width: 392px;
+	min-height: 62px;
+	background-repeat: no-repeat;
+	background-color: white;
+}
+
+.submitButton:focus {
+	border: none;
+	outline: thin dotted;
+	outline: none;
+	outline-offset: none;
+}
+
+
+@media only screen and (max-width: 480px) {
+	.loginButton {
+		background-image: url("../images/login/login_btn_mobile.png");
+		min-height: 47px;
+		max-width: 274px;
+	}
+	.loginUserInput{
+    	width: 74%;
+   		height: 42px;
+	}
+	.loginLogo {
+		background-image: url("../images/login/username_1x.png");
+		width:42px;
+		height:42px;
+	}
+	.loginInputNew {
+        height: 42px;
+	}
+	.PassLogo {
+		background-image: url("../images/login/password_1x.png");
+		width:42px;
+		height:42px;
+	}
+	.submitButton {
+		min-width: 274px;
+		min-height: 50px;
+		background-image: url("../images/add_kyc/submit_mobile.png");
+		/* needs to be changed */
+	}
+	.spacing{
+		max-width:274px;
+	    margin: auto;
+	   	/* margin-top: 16px; */
+	}
+	/* .loginLabel {
+		margin-left:5px;
+	} */
+}
+
+	.loginPageImg {
+		height: 100vh;
+		background-image: url("../images/login/bg.png");
+	}
+/* 	.submitButton {
+		min-width: 274px;
+		min-height: 50px;
+		background-image: url("../images/add_kyc/submit_mobile.png");
+		needs to be changed
+	} */
+}
+
+/* @media only screen and (min-width: 1280px) {
+	.loginLabel{
+		margin-left:45px;
+	}
+} */
+	

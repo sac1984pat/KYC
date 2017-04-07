@@ -1,0 +1,70 @@
+<div ng-controller="headerCtrl">
+	<div public-header></div>
+</div>
+<div class="container-fluid col-md-6 col-md-offset-3 maxMBottom maxMTop noPadding">
+	<div class="col-md-8 col-md-offset-3 col-xs-11 col-xs-offset-1 noPadding" ng-click="clearScope()">
+		<!-- <h3 class="pageTitle">Action KYC Details</h3> -->
+		<p class="text-danger txtMobile">
+			<b>{{error}}</b>
+		</p>
+		<p ng-if="errorFlag" class="text-danger txtMobile">
+			<b>{{errorMsg}}</b>
+		</p>
+		<!-- <p><label>IP Address</label> {{ipAddress}}&nbsp; &nbsp; <label>Port</label> {{port}}</p> -->
+		<form name="operationForm" novalidate>
+			<p class="text-success txtMobile">
+				<b>{{successMsg}}</b>
+			</p>
+			<!-- 				<div class="row">
+					<div class="form-group col-md-6">
+						<label for="chaincodeID">Blockchain ID</label>
+						<input type="text" class="form-control" name="chaincodeID" ng-model="chaincodeID" required>
+					</div>
+				
+				</div> -->
+			<!-- on invoke selection -->
+			<div>
+				<div class="form-group">
+					<label for="userName">User Name</label> <input type="text"
+						class="form-control searchInput" name="userName"
+						ng-model="userName" required>
+				</div>
+				<div class="form-group">
+					<label for="userid">User Id</label> <input type="text"
+						class="form-control searchInput" name="userid" ng-model="userid"
+						required disabled>
+				</div>
+				<div class="form-group inputfile">
+					<label for="kyc">KYC Document</label> <label for="file-upload"
+						class="custom-file-upload btn fileUpload">
+					
+					</label> <input type="file" id="file-upload" class="file searchInput"
+						style="visibility: hidden; position: absolute; right: 15px; border-radius: 3px; z-index: 10;">
+
+
+					<div class="input-group col-xs-12 col-sm-12 col-md-12">
+						<input type="text" class="form-control input-md searchInput"
+							id="main" disabled placeholder=""> <span
+							class="input-group-btn"></span>
+					</div>
+
+				</div>
+
+			</div>
+			<!-- 				<div class="form-group" style="display:inline-block;">
+					<button type="submit"  class="btn btn-primary" ui-sref="operation">
+						Back
+					</button>
+				</div> -->
+			<div class="form-group">
+				<button type="submit" class="btn submitButton minMTop"
+					ng-disabled!="operationForm.$invalid" ng-click="updateCall()">
+
+				</button>
+			</div>
+		</form>
+	</div>
+</div>
+<div ng-controller="footerCtrl">
+	<div footer-directive></div>
+</div>

@@ -1,0 +1,391 @@
+.OperationTopBckgrnd {
+	background-image: url("../images/dashboard/bg_desktop.png");
+}
+.dashboardTop{
+	background-image:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#0A1426), color-stop(50%,#1a1d4d));
+	padding:5px;
+}
+.refreshBtn {
+	position: absolute;
+    right: 40px;
+    top: 4px;
+	background-image: url(../images/dashboard/btnRefresh.png);
+	height: 30px;
+	width: 30px;
+	background-repeat: no-repeat;
+}
+.title {
+	color: #FBFBFB;
+	font-size: 24px;
+	text-align: center;
+}
+
+.titleBank {
+	font-size: 30px;
+	color: #CCCCCC;
+	padding-top: 80px;
+	text-align: center;
+}
+
+.bckBtn {
+	display: inline-block;
+	background-image: url("../images/dashboard/back.png");
+	background-repeat: no-repeat;
+	min-height: 30px;
+	min-width: 30px;
+	position: fixed;
+	top: 20px;
+}
+
+.bankName {
+	text-align: center;
+}
+
+.customersKycdata {
+	/* color:white; */
+	display: -webkit-flex; /* Safari */
+	-webkit-justify-content: space-around; /* Safari 6.1+ */
+	display: flex;
+	padding-left: 0;
+	padding-right: 0;
+	justify-content: space-around;
+}
+
+.detailsBubble {
+	display: inline-block;
+	text-align: center;
+	border-radius: 50%;
+	background: #0A0F4F;
+	border: 6px solid #474B5D;
+}
+
+.bigBubble {
+	max-width: 200px;
+	max-height: 200px;
+	border: 12px solid #474B5D;
+	color: white;
+	font-size: 18pt;
+	background: #0A0D51;
+	padding: 40px 9px 74px 8px;
+}
+
+.redBubble {
+	max-width: 135px;
+	max-height: 135px;
+	padding: 20px 9px 74px 8px;
+	font-size: 14pt;
+	color: #DA1B56;
+	margin-top: 70px;
+}
+
+.yellowBubble {
+	max-width: 135px;
+	max-height: 135px;
+	padding: 20px 9px 74px 8px;
+	font-size: 14pt;
+	color: #F3CB30;
+	margin-top: 70px;
+}
+
+.countKYC {
+	font-weight: bold;
+	font-size: 24pt;
+}
+
+.totalKYC {
+	font-weight: bold;
+	font-size: 40pt;
+}
+
+.circleContainer {
+	/* inline-box hack to eliminate white space */
+	text-align: center;
+}
+
+.circle {
+	display: inline-block;
+	/* to allow placement of numbers on top of circles instead of below them */
+	white-space: nowrap;
+	position: relative;
+	bottom: 27px;
+	opacity: 0.5;
+}
+
+.circle:before {
+	border-radius: 50%;
+	/* = 15%, almost gives us viewport width unit (15vw) */
+	/*  width: 10px;
+*/ /*  padding-bottom: 100%;
+*/ /* this way we should have 1px gap between circles */
+	margin: 15px 38.5px;
+	background: #bcbcbc;
+	content: '';
+	display: inline-block;
+	/* circle to the middle, so that... [1] */
+	vertical-align: middle;
+	/* to use viewport based units we can safely override the old units in this way */
+	padding-bottom: 0vw;
+	width: 15px;
+	height: 15px;
+}
+
+.circle p {
+	display: inline-block;
+	font-size: 13pt;
+	/* -.5em = white space between p elements... */
+	/* ... text can be middle too! [1] */
+	vertical-align: middle;
+	white-space: normal;
+	margin: 3px 0 0 -17vw;
+	width: 15vw;
+	position: relative;
+	top: 10px;
+	left: 83px;
+	color: white;
+}
+
+.circleWhite{
+	opacity: 1;
+}
+.circleWhite:before{
+	width: 25px;
+	height: 25px;
+	border:6px solid white;
+}
+.circleWhite p{
+	color:white;
+}
+
+
+.OperationAdd {
+	text-align: center;
+	margin: 20px 0px;
+}
+
+.addBTn {
+	background-image: url("../images/dashboard/addNewKYC_2x.png");
+	min-width: 390px;
+	background-color: transparent;		
+	min-height: 62px;
+	background-repeat: no-repeat;
+	border: none;
+}
+
+
+.orLine {
+	text-align: center;
+}
+
+.or {
+	color: #666666;
+	font-size: 14px;
+	border: 1px solid #CCCCCC;
+	background: #CCCCCC;
+	padding: 10px 8px;
+	border-radius: 50%;
+    position: relative;
+    top: 10px;
+}
+
+.searchLabel {
+	margin-bottom: 20px;
+	margin-top:20px;
+	/* margin-left:150px; */
+	color: #bcbcbc;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.searchInput {
+	height: 60px;
+	border-radius: 25px;
+	max-width: 390px;
+	margin-bottom: 25px;
+	text-align: left;
+}
+
+.searchButton {
+	background-image: url("../images/dashboard/search_kyc_btn.png");
+	min-width: 390px;
+	min-height: 62px;
+	background-repeat: no-repeat;
+	background-color: white;
+	border: none;
+}
+.mainDWNload{
+	display:inline-block;
+	text-decoration:none;
+	font-size:14px; 
+	cursor:pointer;
+}
+	
+.lineGradient {
+	width: 100%;
+	height: 2px;
+	background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #2ec3db),
+		color-stop(50%, #cbe637), color-stop(98%, #e88746));
+}
+.fileUpload{
+	display: inline-block; 
+	padding: 15px 12px; 
+	cursor: pointer; 
+	/* position: absolute; */ 
+	/* right: 49px;  */
+	z-index: 10; 
+	/* margin-top: 53px;  */
+	  position: relative;
+       left: 190px;
+       top: 60px;
+       background-image: url(../images/add_kyc/uploadKYC_2x.png);
+       height: 61px;
+       width: 61px;
+       background-repeat: no-repeat;
+	
+}
+.viewKYCIcons{
+	top: 20px;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    border-radius:50%;
+    margin:5px;
+    background-color:#cccccc;
+    background-repeat: no-repeat;
+}
+.filterImg{
+	position: relative;
+    top: 15px;
+    padding: 10px;
+	background-image: url(../images/common/filter-act_1x.png);
+}
+.searchImg{
+    position: relative;
+    top: 15px;
+    padding: 10px;
+	background-image: url(../images/common/search-act_1x.png);
+}
+.addImg{	
+	position: relative;
+    top: 15px;
+    padding: 10px;
+	background-image: url(../images/common/addKYC-in_1x.png);
+}
+.fixed{
+	   position: fixed;
+       right: 36px;
+       top: 21px;
+       }
+/* 
+@media only screen and (max-width: 1024px){
+{
+	
+} */
+@media only screen and (max-width:570px) and (min-width:320px) {
+	.OperationTopBckgrnd {
+		background-image: url("../images/dashboard/bg.png");
+	}
+	.customersKycdata {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.detailsBubble {
+		border: 4px solid #474B5D;
+	}
+	.bigBubble {
+		max-width: 114px;
+		max-height: 114px;
+		border: 8px solid #474B5D;
+		font-size: 10pt;
+		padding: 20px 9px 74px 8px;
+	}
+	.redBubble {
+		max-width: 95px;
+		max-height: 95px;
+		padding: 12px 9px 74px 8px;
+		font-size: 9pt;
+		margin-top: 25px;
+	}
+	.yellowBubble {
+		max-width: 95px;
+		max-height: 95px;
+		padding: 12px 9px 74px 8px;
+		font-size: 9pt;
+		margin-top: 25px;
+	}
+	.countKYC {
+		font-size: 12pt;
+	}
+	.totalKYC {
+		font-size: 14pt;
+	}
+	.titleBank {
+		font-size: 22px;
+		padding-top:60px;
+		padding-bottom: 10px;
+	}
+	.title {
+		font-size: 20px;
+	}
+	.circle:before {
+		margin: 0 auto;
+	}
+	.circle p {
+		display: inline-block;
+		font-size: 8pt;
+		vertical-align: middle;
+		margin: 8px 0 0 -13vw;
+		position: relative;
+		top: 10px;
+		left: 3px;
+	}
+	.OperationAdd {
+		margin: 5px 0px;
+	}
+	.addBTn {
+		min-width: 274px;
+	    background-color: transparent;
+		min-height: 50px;
+		background-image: url("../images/dashboard/addNewKYC_1x.png");
+	}
+	
+	.searchLabel {
+		margin-bottom: 20px;
+		font-size: 16px;
+		/* margin-left:10px; */
+	}
+	.searchInput {
+		max-width: 274px;
+		max-height:40px;
+	}
+	.searchButton {
+		min-width: 274px;
+		min-height: 50px;
+		background-image: url("../images/dashboard/search_kyc_btn_mobile.png");
+	}
+	.fileUpload{
+	/* 	margin-top:44px !important; */
+		max-height:42px;
+		width:42px;
+		left: 136px;;
+		top:43px;
+		padding:12px !important;
+		background-image: url("../images/add_kyc/uploadKYC_1x.png");
+	}
+	.viewKYCIcons{
+		top: 10px;
+	}
+	.txtMobile{
+		font-size: 8pt !important;
+	}
+	.fixed{
+	   right: 10px;
+       top: 15px;
+    }
+    .or {
+		padding: 4px 3px;
+	}
+	.mainDWNload{
+		font-size:14px; 
+	}
+	
+}

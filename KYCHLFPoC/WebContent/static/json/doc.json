@@ -1,0 +1,32 @@
+{"updateUsers":[{
+			"userID":"test_user1",
+			"password":"jGlNl6ImkuDo",
+			"blockchainIPAddress":"192.168.99.100",
+			"bankName":"HDFC",
+			"port":"7050",
+			"chainCode":"0d65dbedabef6a41d330b95d6f449d73b1e48ad4d84bdf798fb332d2d375a712411bef7e2c3306dfb50854f2c18ea249a8af58b31d069331c70babf5b0417150"
+		},{
+			"userID":"test_user2",
+			"password":"zMflqOKezFiA",
+			"blockchainIPAddress":"10.102.8.119",
+			"port":"9091",
+			"bankName":"HDFC",
+			"chainCode":"0d65dbedabef6a41d330b95d6f449d73b1e48ad4d84bdf798fb332d2d375a712411bef7e2c3306dfb50854f2c18ea249a8af58b31d069331c70babf5b0417150"
+		},{
+			"userID":"test_user3",
+			"password":"vWdLCE00vJy0",
+			"blockchainIPAddress":"10.102.8.119",
+			"port":"9092",
+			"bankName":"Citi",
+			"chainCode":"0d65dbedabef6a41d330b95d6f449d73b1e48ad4d84bdf798fb332d2d375a712411bef7e2c3306dfb50854f2c18ea249a8af58b31d069331c70babf5b0417150"
+		},{
+			"userID":"test_user4",
+			"password":"4nXSrfoYGFCP",
+			"blockchainIPAddress":"10.102.8.119",
+			"port":"9093",
+			"bankName":"HDFC",
+			"chainCode":"0d65dbedabef6a41d330b95d6f449d73b1e48ad4d84bdf798fb332d2d375a712411bef7e2c3306dfb50854f2c18ea249a8af58b31d069331c70babf5b0417150"
+		}
+	
+]
+}

@@ -1,0 +1,57 @@
+<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 noPadding maxMBottom" ng-controller="operationCtrl">
+	<div class="OperationTopBckgrnd">
+	     <div class="panel-body navbar-fixed-top dashboardTop col-xs-12 col-sm-12 col-md-6 col-md-offset-3">	
+		     <div class="col-xs-12 col-sm-12 col-md-12  title pull-right noPadding">
+		       <div class="disInline">Dashboard</div>
+		       <div class="refreshBtn disInline pull-right pointer" ng-click="reload()"></div>
+		       <div class="logOutBtn disInline pull-right pointer" ng-click="operationlogout()"></div>
+		     </div>
+		   
+	     </div>
+	     <div class="panel-body noPadding minPBottom"> 
+		        <div class="titleBank maxPBottom">
+		           <span>Bank: {{bankName}}<span>
+		        </div>
+		        <div class="customersKycdata col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
+		            <div class="col-xs-4 col-sm-4 col-md-4 detailsBubble redBubble pointer" ng-click="expiringKyc()">
+			            <span>Expiring</br>This Month</span></br>
+			            <span class="countKYC">{{expiringContracts}}</span>
+		            </div>
+		            <div class="col-xs-4 col-sm-4 col-md-4 detailsBubble bigBubble pointer" ng-click="totalKyc()">
+		             <span>Total KYC</span></br>
+			            <span class="totalKYC">{{AllContracts}}</span>
+			         </div>
+		            <div class="col-xs-4 col-sm-4 col-md-4 detailsBubble yellowBubble pointer" ng-click="addedKyc()">
+		            	<span>Added</br>This Month</span></br>
+			            <span class="countKYC">{{CreatedContracts}}</span>
+		            </div>
+		        </div>
+		</div>   
+	 	 <div class="OperationAdd panel-body">
+				<button type="submit" class="btn pointer addBTn" ui-sref="add">
+				</button>
+	 	 </div>
+	 	 <div class="orLine"><span class="or">OR</span></div>	
+	 </div>	
+    
+      <div class="panel-body viewContainer">
+			 <form class="form-group noPadding" name="searchForm">
+				<div class="labelAlign noPadding mAuto">
+					<label for="userid" class="searchLabel noPadding">User ID</label>
+				</div>
+				<input type="text" class="form-control searchInput textCenter" name="userid" ng-model="userid">
+				<div class="form-group textCenter minPTop">
+					<button type="submit" class="btn searchButton" ng-click="operationCall()">
+						
+					</button>
+				</div>
+			</form>
+				
+     </div>
+ </div>  
+  
+ </div>
+ <div ng-controller="footerCtrl">
+	<div footer-directive></div>
+</div>
+ 

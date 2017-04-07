@@ -1,0 +1,52 @@
+<!-- <div ng-controller="headerCtrl">
+	<div public-header></div>
+</div> -->
+<div class="container-fluid loginPageImg col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
+	<div class="login-box col-xs-12 col-sm-6 col-md-8">
+		<!-- <div class="mainLogo logoMarginBottom noPadding"></div> -->
+		<form name="loginForm" novalidate>
+			<p class="text-danger">
+				<b>{{error}}</b>
+			</p>
+	
+			<div class="minPTop minPBottom col-xs-12 col-sm-12 col-md-12">
+				<div class="labelAlign noPadding mAuto">
+					<label for="userid" class="searchLabel noPadding">User ID</label>
+				</div>
+				
+				<!-- <label for="userid" class="loginLabel">User ID</label>
+				 --><p class="spacing"> 
+				<span class="col-xs-2 col-sm-2 col-md-2 loginLogo"></span>	
+				 <input type="text" class="form-control loginInputNew col-xs-10 col-sm-10 col-md-10" name="userid"
+					id="userid" ng-model="userid" required>
+				</p>	
+			</div>
+			<div class="minPTop minMTop minPBottom col-xs-12 col-sm-12 col-md-12">
+				<div class="labelAlign noPadding mAuto">
+					<label for="pwd" class="searchLabel noPadding">Password</label>
+				</div>
+				<!-- <label for="pwd" class="loginLabel">Password</label>  -->
+			  <p class="spacing"> 
+				<span class="col-xs-2 col-sm-2 col-md-2 PassLogo"></span>
+				<input type="password" class="form-control loginInputNew col-xs-10 col-sm-10 col-md-10" name="pwd"
+					ng-model="pwd" required>
+			  </p> 		
+			</div>
+			<div class="form-group minPTop minPBottom col-xs-12 col-sm-12 col-md-12">
+				
+			</div>
+			<div class="form-group minPTop forgotPwd  col-xs-12 col-sm-12 col-md-12">
+				<div type="submit" class="loginButton"
+					ng-disabled="loginForm.$invalid" ng-click="login(userid,pwd)">
+				</div>
+			</div>
+			<div class="minPTop forgotPwd  col-xs-12 col-sm-12 col-md-12">
+				<label class="minFontSize">FORGOT PASSWORD?</label>
+			</div>
+
+		</form>
+	</div>
+</div>
+<!-- <div ng-controller="footerCtrl">
+	<div footer-directive></div>
+</div> -->

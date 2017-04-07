@@ -1,0 +1,60 @@
+<div ng-controller="headerCtrl">
+	<div public-header></div>
+</div>
+
+<div class="container-fluid col-md-6 col-md-offset-3 col-sm-4 col-sm-offset-4 maxMBottom maxMTop noPadding" ng-controller="addKycCtrl">
+	<div class="col-md-8 col-md-offset-3 col-xs-11 col-xs-offset-1 noPadding" ng-click="clearScope()">
+		<p class="text-danger">
+			<b>{{error}}</b>
+		</p>
+		<p ng-if="errorFlag" class="text-danger txtMobile">
+			<b>{{errorMsg}}</b>
+		</p>
+		<p class="text-success txtMobile">
+			<b>{{successMsg}}</b>
+		</p>
+		<p class="text-success txtMobile">
+			<b>{{updateQueryObj}}</b>
+		</p>
+		<form name="operationForm" novalidate>
+			<div>
+				<div class="form-group">
+					<label for="userName">User Name:</label> <input type="text"
+						class="form-control searchInput" name="userName"
+						ng-model="userName" required>
+				</div>
+				<div class="form-group">
+					<label for="userid">User Id:</label> <input type="text"
+						class="form-control searchInput" name="userid"
+						ng-model="userid" required>
+				</div>
+				
+				<div class="form-group inputfile">
+					<label for="kyc">KYC Document: </label>
+					<label for="file-upload" class="custom-file-upload btn fileUpload"></label> 
+					<input type="file" id="file-upload" class="file searchInput"
+						style="visibility: hidden; position: absolute; right: 15px; border-radius: 3px; z-index: 10;">
+					<!-- //style="position:absolute;visibility:hidden; -->
+
+					<div class="input-group col-xs-12 col-sm-12 col-md-12 ">
+						<input type="text" class="form-control input-md searchInput"
+							id="main" disabled placeholder="Upload Documents"> <span
+							class="input-group-btn">
+						</span>
+					</div>
+
+				</div>
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn submitButton minMTop"
+					ng-disabled!="operationForm.$invalid" ng-click="operationCall()">
+
+				</button>
+			</div>
+		</form>
+	</div>
+</div>
+</div>
+<div ng-controller="footerCtrl">
+	<div footer-directive></div>
+</div>

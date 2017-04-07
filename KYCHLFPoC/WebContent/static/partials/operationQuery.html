@@ -1,0 +1,73 @@
+<div ng-controller="headerCtrl">
+	<div public-header></div>
+</div>
+<div class="container-fluid col-md-3 col-md-offset-5 col-xs-9 col-xs-offset-2">
+	<div class="col-md-4 col-xs-4 viewKYCIcons">
+		<div class="filterImg"></div>
+	</div>
+	<div class="col-md-4 col-xs-4 viewKYCIcons" ui-sref="operation">
+		<div class="searchImg"></div>
+	</div>
+	<div class="col-md-4 col-xs-4 viewKYCIcons" ui-sref="add">
+		<div class="addImg"></div>
+	</div>
+</div>
+<div class="container-fluid col-md-6 col-md-offset-3 col-sm-12 col-xs-12 maxMBottom minMTop" ng-controller="operationQueryCtrl">
+	<div class="login-box">
+		<p class="text-success txtMobile">
+			<b>{{updateQueryObj}}</b>
+		</p>
+		<!-- <h3 class="pageTitle">View KYC Details</h3> -->
+		<div class="noDataFound" ng-show="noDataFound">No KYC details found</div>
+		
+		<div ng-repeat="item in queryObj track by $index">
+			<div class="radio marginBottom10" ng-show!="noDataFound">
+			<!-- <span>User {{$index+1}}</span> -->
+			<span>{{item.USER_NAME}}</span>
+  			<label class="lblRadio">
+  			<input type="radio" class="inputRadio" ng-model="result" ng-change ="valueit($index,item,queryObj)"  name="userradio">
+  			<i class="fa fa-pencil" aria-hidden="true"></i>
+  			</label>
+  			
+			</div>
+		
+			<div>
+				<label class="resultHeading">User Name:</label>
+				<span class="resultData">{{item.USER_NAME}}</span>
+			</div>
+			<div>
+				<label class="resultHeading">User Id:</label>
+				<span class="resultData">{{item.USER_ID}}</span>
+			</div>
+			<div>
+				<label class="resultHeading">Bank Name:</label>
+				<span class="resultData">{{item.KYC_BANK_NAME}}</span>
+			</div>
+			<div>
+				<label class="resultHeading">KYC Date:</label>
+				<span class="resultData">{{item.KYC_CREATE_DATE  | date:'mediumDate'}}</span>
+			</div>
+			<div>
+				<label class="resultHeading">KYC Valid Till Date:</label>
+				<span class="resultData">{{item.KYC_VALID_TILL_DATE  | date:'mediumDate'}}</span>
+			</div>
+			<div >
+				<label class="resultHeading">KYC Document:</label>
+				<div class="mainDWNload">
+				       <a id='dwnldLnk' download='kyc.pdf' style="display:none;" />
+				      <a ng-click="downloadPDF($index);" class="dwnldLnk" title='kyc.pdf'>Download PDF</a>
+			   </div>
+			</div>			
+		</div>
+<!-- 		<form novalidate>
+				<div class="form-group pull-right" style="display:inline-block;" ng-if="btndisp">
+					<button class="btn btn-primary"  ng-click="update()">
+						Update KYC Details
+					</button>
+				</div>
+		</form> -->
+	</div>
+</div>
+<div ng-controller="footerCtrl">
+	<div footer-directive></div>
+</div>

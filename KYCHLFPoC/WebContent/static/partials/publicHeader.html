@@ -1,0 +1,32 @@
+<div class="container-fluid header-outer">
+    <div class="row">
+        <header class="menubar navbar-fixed-top">
+             <div class="headerFirst col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="col-xs-2 col-sm-2 col-md-2 pull-left pointer disInline" ui-sref="operation" ng-show="currentState !='update'">
+                            <img src="static/images/dashboard/back.png">
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-md-2 pull-left disInline pointer" ui-sref="operationQuery({listRoute: true})" ng-show="currentState =='update'">
+                            <img src="static/images/dashboard/back.png">
+                        </div>
+                         <div class="col-xs-8 col-sm-8 col-md-8 headerText disInline" ng-show="currentState =='add'">
+                            <span>Add KYC Details</span>
+                        </div>
+                         <div class="col-xs-8 col-sm-8 col-md-8 headerText disInline" ng-show="currentState =='operationQuery'">
+                            <span>View KYC Details</span>
+                        </div>
+                         <div class="col-xs-8 col-sm-8 col-md-8 headerText disInline" ng-show="currentState =='update'">
+                            <span>Edit KYC Details</span>
+                        </div>
+						<div class="logOutBtn pull-right pointer" ng-click="logout()"></div>
+                    </div>
+                </div>
+            	
+            </div>
+            <div class="headerSecond col-xs-12 col-sm-12 col-md-6 col-md-offset-3"> <!-- ng-show="currentState !='operationQuery' -->
+                  <div class="headerBankname col-xs-11 col-sm-11 col-md-11">Bank: <span class="bankName">&nbsp{{bankName}}</span></div>
+            </div>
+        </header>
+    </div>
+</div>

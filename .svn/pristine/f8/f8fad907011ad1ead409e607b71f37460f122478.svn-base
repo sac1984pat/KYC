@@ -1,0 +1,16 @@
+<div ng-controller="successCtrl">
+	<div public-header></div>
+</div>
+
+<div class="container maxMBottom">
+	<div class="row">
+		<p class="text-success">
+			<b>{{successMsg}}</b>
+		</p>
+	</div>
+</div>
+
+<div ng-controller="footerCtrl">
+	<div footer-directive></div>
+</div>
+

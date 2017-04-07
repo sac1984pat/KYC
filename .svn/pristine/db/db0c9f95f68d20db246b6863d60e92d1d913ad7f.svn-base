@@ -1,0 +1,48 @@
+.headerFirst {
+	background-color: #26377D;
+	padding: 5px 12px;
+}
+
+.logOutBtn {
+	background-image: url(../images/common/Logout_2x.png);
+	height: 30px;
+	width: 30px;
+	background-repeat: no-repeat;
+}
+
+.headerText {
+	font-family: Montserrat-Light;
+	text-align: center;
+	color: #ffffff;
+	font-size: 24px;
+}
+
+.headerSecond {
+	background-color: #333333;
+	font-size: 24px;
+	font-family: Montserrat-Light;
+}
+
+.headerBankname {
+	color: #999999;
+	display:inline-flex;
+}
+
+.bankName {
+	color: #666666;
+}
+@media only screen and (max-width:570px) and (min-width:320px)
+{
+	.headerText {
+		font-size: 16px;
+	}
+	.logOutBtn {
+		margin-top:5px;
+		height: 25px;
+		width:20px;
+		background-image: url(../images/common/Logout_1x.png);
+	}
+	.headerSecond {
+		font-size: 16px;
+	}	
+}
