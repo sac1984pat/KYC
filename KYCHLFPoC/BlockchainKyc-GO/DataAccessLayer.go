@@ -136,16 +136,13 @@ func GetKYCDetails(stub shim.ChaincodeStubInterface, UserId string) (KycData, er
                 }
 
                 if KycDataObj.KYC_BANK_NAME == BankList[0] {
-                                KycDataObj.KYC_INFO_1 = row.Columns[6].GetString_()
-                }
-                else if KycDataObj.KYC_BANK_NAME == BankList[1]{
-                                KycDataObj.KYC_INFO_2 = row.Columns[7].GetString_()
-                }
-                else if KycDataObj.KYC_BANK_NAME == BankList[2]{
-                                KycDataObj.KYC_INFO_3 = row.Columns[8].GetString_()
-                }
-                else if KycDataObj.KYC_BANK_NAME == BankList[3]{
-                                KycDataObj.KYC_INFO_4 = row.Columns[9].GetString_()
+                      KycDataObj.KYC_INFO_1 = row.Columns[6].GetString_()
+                } else if KycDataObj.KYC_BANK_NAME == BankList[1]{
+                      KycDataObj.KYC_INFO_2 = row.Columns[7].GetString_()
+                } else if KycDataObj.KYC_BANK_NAME == BankList[2]{
+                      KycDataObj.KYC_INFO_3 = row.Columns[8].GetString_()
+                } else if KycDataObj.KYC_BANK_NAME == BankList[3]{
+                      KycDataObj.KYC_INFO_4 = row.Columns[9].GetString_()
                 }
                 return KycDataObj, nil
 }
