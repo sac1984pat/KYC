@@ -111,27 +111,45 @@ func PutBankList(stub shim.ChaincodeStubInterface, BankList []string) (bool, err
 }
 
 func GetKYCDetails(stub shim.ChaincodeStubInterface, UserId string) (KycData, error) {
-	var KycDataObj KycData
+                var KycDataObj KycData
+                var BankList []string
+                var columns []shim.Column
 
-	var columns []shim.Column
+                col1 := shim.Column{Value: &shim.Column_String_{String_: UserId}}
+                columns = append(columns, col1)
 
-	col1 := shim.Column{Value: &shim.Column_String_{String_: UserId}}
-	columns = append(columns, col1)
+                row, err := stub.GetRow("KycDetails", columns)
+                if err != nil {
+                                return KycDataObj, errors.New("Failed to query")
+                }
 
-	row, err := stub.GetRow("KycDetails", columns)
-	if err != nil {
-		return KycDataObj, errors.New("Failed to query")
-	}
+                KycDataObj.USER_ID = row.Columns[0].GetString_()
+                KycDataObj.KYC_BANK_NAME = row.Columns[1].GetString_()
+                KycDataObj.USER_NAME = row.Columns[2].GetString_()
+                KycDataObj.KYC_CREATE_DATE = row.Columns[3].GetString_()
+                KycDataObj.KYC_VALID_TILL_DATE = row.Columns[4].GetString_()
+                KycDataObj.KYC_DOC_BLOB = row.Columns[5].GetString_()
 
-	KycDataObj.USER_ID = row.Columns[0].GetString_()
-	KycDataObj.KYC_BANK_NAME = row.Columns[1].GetString_()
-	KycDataObj.USER_NAME = row.Columns[2].GetString_()
-	KycDataObj.KYC_CREATE_DATE = row.Columns[3].GetString_()
-	KycDataObj.KYC_VALID_TILL_DATE = row.Columns[4].GetString_()
-	KycDataObj.KYC_DOC_BLOB = row.Columns[5].GetString_()
+                BankList, err = GetBankList(stub)
+                if err != nil {
+                                return false, err
+                }
 
-	return KycDataObj, nil
+                if KycDataObj.KYC_BANK_NAME == BankList[0] {
+                                KycDataObj.KYC_INFO_1 = row.Columns[6].GetString_()
+                }
+                else if KycDataObj.KYC_BANK_NAME == BankList[1]{
+                                KycDataObj.KYC_INFO_2 = row.Columns[7].GetString_()
+                }
+                else if KycDataObj.KYC_BANK_NAME == BankList[2]{
+                                KycDataObj.KYC_INFO_3 = row.Columns[8].GetString_()
+                }
+                else if KycDataObj.KYC_BANK_NAME == BankList[3]{
+                                KycDataObj.KYC_INFO_4 = row.Columns[9].GetString_()
+                }
+                return KycDataObj, nil
 }
+
 
 func GetUserList(stub shim.ChaincodeStubInterface, BankName string) ([]string, error) {
 	var UserList []string
